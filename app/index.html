@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Isi Kayu Premium</title>
+    <meta name="description" content="Hitung isi kayu Jati dan Mahoni dengan mudah dan akurat.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <main class="container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-tree"></i>
+                <h1>WoodCalc</h1>
+            </div>
+            <p class="subtitle">Kalkulator Isi Kayu Otomatis</p>
+        </header>
+
+        <section class="calculator-card glass-panel">
+            <div class="input-group">
+                <label for="woodType">Jenis Kayu</label>
+                <div class="select-wrapper">
+                    <select id="woodType">
+                        <option value="jati">Kayu Jati</option>
+                        <option value="mahoni">Kayu Mahoni</option>
+                    </select>
+                    <i class="fa-solid fa-chevron-down arrow-icon"></i>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label for="diameter">Diameter (cm)</label>
+                    <input type="number" id="diameter" placeholder="Contoh: 10" min="0">
+                </div>
+
+                <div class="input-group">
+                    <label for="length">Panjang (cm)</label>
+                    <input type="number" id="length" placeholder="Contoh: 80" step="10" min="0">
+                </div>
+            </div>
+
+            <button id="calcBtn" class="primary-button">
+                Hitung Isi Kayu
+                <i class="fa-solid fa-calculator"></i>
+            </button>
+        </section>
+
+        <section id="resultSection" class="result-card hidden">
+            <div class="result-content glass-panel-dark">
+                <span class="result-label">Isi Kayu</span>
+                <div class="result-value-wrapper">
+                    <span id="resultValue" class="count-up">0.00</span>
+                    <span class="unit">m³</span>
+                </div>
+                <div id="resultDetails" class="result-details">
+                    <!-- Detail input akan muncul di sini -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WoodCalc Premium. Dibuat dengan sepenuh hati.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
